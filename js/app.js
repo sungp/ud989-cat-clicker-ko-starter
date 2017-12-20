@@ -17,13 +17,15 @@ var Cat = function() {
         return "Adult";
     }, this);
     this.nickname = ko.observable(['Tabtab', 'T-bone', 'Mr.T', 'Tabitha Tab']); 
-};
+}
 
 var ViewModel = function() {
-    this.currentCat = ko.observable(new Cat());
+    var self = this;
+  
+    this.currentcat = ko.observable(new Cat());
     this.incrementCounter = function() {
-        this.currentCat().clickCount(this.currentCat().clickCount() + 1);
+        self.currentcat().clickCount(self.currentcat().clickCount() + 1);
     };
-};
+}
 
 ko.applyBindings(new ViewModel());
