@@ -19,6 +19,7 @@ var ViewModel = function() {
     this.incrementCounter = function() {
         this.clickCount(this.clickCount() + 1);
     };
+    this.nickname = ko.observable(['Tabtab', 'T-bone', 'Mr.T', 'Tabitha Tab']); 
 }
 
 ko.applyBindings(new ViewModel());
