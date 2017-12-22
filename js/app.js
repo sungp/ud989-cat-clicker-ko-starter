@@ -55,7 +55,7 @@ var ViewModel = function() {
         self.currentcat().clickCount(self.currentcat().clickCount() + 1);
     };
     this.selectcat = function(data) {
-        self.currentcat(this); 
+        self.currentcat(data); 
     }
 }
 
